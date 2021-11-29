@@ -3,7 +3,7 @@ on:
     types: [opened]
 jobs:
   triage:
-    if ${{github.event.issue.body}} == ''
+    if ${{github.event.issue.body == '' }}
     runs-on: ubuntu-latest
     steps:
       - name: add triage label
