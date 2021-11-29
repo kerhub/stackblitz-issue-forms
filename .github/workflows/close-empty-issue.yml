@@ -3,12 +3,8 @@ on:
     types: [opened]
 jobs:
   triage:
-    runs-on: ubuntu-latest
+    if: "${{ github.event.issue.body == '' }}"
     steps:
-      - name: foo
-        run: |
-          echo "Issue title: ${{ github.event.issue.title }}"
-          echo "Issue body: ${{ github.event.issue.body }}"
       - name: add triage label
         uses: kerhub/saved-replies@v0.3.0
         with:
