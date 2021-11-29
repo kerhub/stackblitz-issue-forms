@@ -4,6 +4,7 @@ on:
 jobs:
   triage:
     if: "${{ github.event.issue.body == '' }}"
+    runs-on: ubuntu-latest
     steps:
       - name: add triage label
         uses: kerhub/saved-replies@v0.3.0
