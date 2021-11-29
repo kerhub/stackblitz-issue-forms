@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: foo
-        run: echo ${{github.event.issue.body}}
+        run: echo ${{github.event.issue}}
       - name: add triage label
         uses: kerhub/saved-replies@v0.3.0
         with:
